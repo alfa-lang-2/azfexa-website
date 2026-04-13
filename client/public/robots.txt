@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /*.json$
+
+Sitemap: https://azfexa.com/sitemap.xml
+
+# Crawl delay (in seconds)
+Crawl-delay: 1

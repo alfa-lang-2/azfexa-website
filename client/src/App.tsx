@@ -5,12 +5,30 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
+import BrandingService from "./pages/BrandingService";
+import SocialMediaService from "./pages/SocialMediaService";
+import WebDevelopmentService from "./pages/WebDevelopmentService";
+import ContentCreationService from "./pages/ContentCreationService";
+import DigitalMarketingService from "./pages/DigitalMarketingService";
+import InfluencerMarketingService from "./pages/InfluencerMarketingService";
+import About from "./pages/About";
+import CaseStudies from "./pages/CaseStudies";
+import FAQ from "./pages/FAQ";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
       <Route path={"/"} component={Home} />
+      <Route path={"/services/branding"} component={BrandingService} />
+      <Route path={"/services/social-media"} component={SocialMediaService} />
+      <Route path={"/services/web-development"} component={WebDevelopmentService} />
+      <Route path={"/services/content-creation"} component={ContentCreationService} />
+      <Route path={"/services/digital-marketing"} component={DigitalMarketingService} />
+      <Route path={"/services/influencer-marketing"} component={InfluencerMarketingService} />
+      <Route path={"/about"} component={About} />
+      <Route path={"/case-studies"} component={CaseStudies} />
+      <Route path={"/faq"} component={FAQ} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
