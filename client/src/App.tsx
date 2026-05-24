@@ -14,6 +14,8 @@ import InfluencerMarketingService from "./pages/InfluencerMarketingService";
 import About from "./pages/About";
 import CaseStudies from "./pages/CaseStudies";
 import FAQ from "./pages/FAQ";
+import Blog from "./pages/Blog";
+import BlogArticle from "./pages/BlogArticle";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -29,6 +31,8 @@ function Router() {
       <Route path={"/about"} component={About} />
       <Route path={"/case-studies"} component={CaseStudies} />
       <Route path={"/faq"} component={FAQ} />
+      <Route path={"/blog"} component={Blog} />
+      <Route path={"/blog/:slug"} component={BlogArticle} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
