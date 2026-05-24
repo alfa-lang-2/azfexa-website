@@ -1,13 +1,18 @@
 /**
  * pnpmfile.cjs
  * 
- * This file is used by pnpm to apply patches and overrides to dependencies.
+ * This file is used by pnpm to apply patches, overrides, and build script permissions.
  * It replaces the deprecated "pnpm" field in package.json.
  * 
  * See: https://pnpm.io/pnpmfile
  */
 
 function readPackage(pkg, context) {
+  // Allow build scripts for required dependencies
+  if (['@tailwindcss/oxide', 'esbuild'].includes(pkg.name)) {
+    pkg.allowBuild = true;
+  }
+
   // Apply dependency overrides
   if (!pkg.pnpm) {
     pkg.pnpm = {};
