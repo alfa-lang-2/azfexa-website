@@ -1,0 +1,11 @@
+packages:
+  - '.'
+allowBuilds:
+  '@tailwindcss/oxide': set this to true or false
+  esbuild: set this to true or false
+
+# Pnpm configuration
+# This file defines the workspace structure and pnpm settings
+
+# Patched dependencies are now handled by .pnpmfile.cjs
+# Overrides are now handled by .pnpmfile.cjs
